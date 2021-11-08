@@ -1,0 +1,26 @@
+{
+  "name": "form",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SasiaDagnoli/form.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SasiaDagnoli/form/issues"
+  },
+  "homepage": "https://github.com/SasiaDagnoli/form#readme",
+  "dependencies": {
+    "vite": "^2.6.13"
+  },
+  "devDependencies": {
+    "sass": "^1.43.4"
+  }
+}
