@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "Shapiro-bold";
+  src: url("typography/sharpiro-bold.woff2");
+}
+
+@font-face {
+  font-family: "Shapiro-regular";
+  src: url("typography/sharpiro-regular.woff2");
+}
+
+@font-face {
+  font-family: "Uniform-pro-black";
+  src: url("typography/uniform-pro-con-black.woff2");
+}
+
+@font-face {
+  font-family: "Uniform-pro-medium";
+  src: url("typography/uniform-pro-con-medium.woff2");
+}
+
+label {
+  font-family: "Shapiro-regular";
+  font-size: 0.9rem;
+  color: white;
+}
+
+::placeholder {
+  font-family: "Shapiro-regular";
+  font-size: 0.6rem;
+}
