@@ -27,4 +27,19 @@ label {
 ::placeholder {
   font-family: "Shapiro-regular";
   font-size: 0.6rem;
+  color: white;
+}
+
+input {
+  color: white;
+}
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+button {
+  font-family: "Shapiro-bold";
+  color: #3917cd;
 }
