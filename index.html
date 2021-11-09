@@ -34,11 +34,16 @@
         <label for="gamertag">Gamertag</label>
         <input type="text" id="gamertag" placeholder="Gamertag" required />
         <label for="email">E-mail</label>
-        <input type="email" id="email" placeholder="E-mail" />
-        <label for="birthday">Date of birth</label>
-        <input type="date" id="birthday" />
+        <input type="email" id="email" placeholder="E-mail" required />
+
         <label for="password">Password</label>
-        <input type="password" id="password" />
+        <input
+          type="password"
+          id="password"
+          minlength="8"
+          placeholder="Password"
+          required
+        />
         <button>Create my profile</button>
       </form>
       <br />
