@@ -1,3 +1,29 @@
-input[type="text"]:valid {
+input:valid {
   border-color: #c6f6bf;
+}
+
+input:invalid:not(:placeholder-shown, :focus) {
+  border-color: #f4b996;
+}
+
+input:invalid:not(:placeholder-shown, :focus) + .error {
+  max-height: 2rem;
+}
+
+.error {
+  color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.3s max-height;
+}
+
+span {
+  line-height: 1.4;
+  display: block;
+  transition: 0.3s;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
 }
