@@ -32,15 +32,21 @@ input[id="lastname"] {
 
 .form {
   background-color: #16152b;
-  height: 100vh;
+  // height: 100vh;
 }
-
-label {
+.form-field {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+#first-form label {
   margin-bottom: 8px;
   margin-top: 15px;
 }
 
-input {
+input,
+select,
+summary {
   border: 2px solid #3917cd;
   background-color: transparent;
   border-radius: 5px;
@@ -58,4 +64,14 @@ button {
 
 .hidden {
   visibility: hidden;
+}
+
+details[open] {
+  background-color: #f4b996;
+  width: 18rem;
+  border-radius: 10px;
+  padding: 0.8rem;
+}
+details[open] label {
+  color: #3917cd;
 }
