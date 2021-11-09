@@ -28,12 +28,26 @@
         </div>
         <label for="gamertag">Gamertag</label>
         <input type="text" id="gamertag" placeholder="Gamertag" required />
-        <label for="email">E-mail</label>
-        <input type="email" id="email" placeholder="E-mail" />
-        <label for="birthday">Date of birth</label>
-        <input type="date" id="birthday" />
-        <label for="password">Password</label>
-        <input type="password" id="password" />
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" placeholder="E-mail" required />
+          <span class="error" id="error-mail" aria-live="assertive"
+            >This field require at least an @-sign</span
+          >
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            minlength="8"
+            placeholder="Password"
+            required
+          />
+          <span class="error" id="error-mail" aria-live="assertive"
+            >This field requires at least 8 characters</span
+          >
+        </div>
         <button>Create my profile</button>
       </form>
       <br />
