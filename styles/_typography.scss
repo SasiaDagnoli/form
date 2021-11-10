@@ -18,14 +18,14 @@
   src: url("typography/uniform-pro-con-medium.woff2");
 }
 
-label,
-summary {
+label {
   font-family: "Shapiro-regular";
   font-size: 0.9rem;
   color: white;
 }
 
-::placeholder {
+::placeholder,
+summary {
   font-family: "Shapiro-regular";
   font-size: 0.6rem;
   color: white;

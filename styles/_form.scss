@@ -30,7 +30,8 @@ input[id="firstname"] {
   margin-top: 5px;
 }
 
-input[id="lastname"] {
+input[id="lastname"],
+summary {
   margin-top: 5px;
 }
 
@@ -43,9 +44,16 @@ input[id="lastname"] {
   align-items: center;
   gap: 1rem;
 }
-#first-form label {
-  margin-bottom: 8px;
-  margin-top: 15px;
+.form-control {
+  margin-top: 2rem;
+}
+.select {
+  display: flex;
+  flex-direction: column;
+}
+label {
+  margin-bottom: 0.7rem;
+  margin-top: 1rem;
 }
 
 input,
@@ -53,8 +61,17 @@ select,
 summary {
   border: 2px solid #3917cd;
   background-color: transparent;
-  border-radius: 5px;
-  height: 40px;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+::-webkit-details-marker {
+  display: none;
+}
+
+summary {
+  display: block;
+  margin-top: 1rem;
 }
 
 button {
@@ -72,7 +89,7 @@ button {
 
 details[open] {
   background-color: #f4b996;
-  width: 18rem;
+  width: 700px;
   border-radius: 10px;
   padding: 0.8rem;
 }
