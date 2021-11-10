@@ -22,6 +22,11 @@ form {
   margin-right: auto;
 }
 
+.gamertag {
+  display: flex;
+  flex-direction: column;
+}
+
 .name {
   display: flex;
 }
@@ -92,10 +97,31 @@ button {
   text-align: center;
 }
 
+.done {
+  width: 44rem;
+}
+
+.firststep,
+.secondstep {
+  border: 0px;
+  background-color: #c6f6bf;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+#third-form {
+  margin-top: -350px;
+}
+
+#second-form {
+  margin-top: -500px;
+}
+
 .firststep,
 .secondstep {
   width: 700px;
-  margin-left: 10rem;
+  /* margin-left: 10rem; */
   margin-right: auto;
 }
 
@@ -123,4 +149,20 @@ details[open] label {
 #Layer_3,
 #Layer_5 {
   fill: none;
+}
+
+.banner {
+  animation: flying_kf;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+}
+
+@keyframes flying_kf {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }

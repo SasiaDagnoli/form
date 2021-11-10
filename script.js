@@ -22,6 +22,7 @@ function showSecond() {
   document.querySelector("#first-form").classList.add("hidden");
 
   document.querySelector("#second-form").classList.remove("hidden");
+  document.querySelector("#Layer_3").style.fill = "#C6F6BF";
 
   document.querySelector(".secondstep").addEventListener("click", showThird);
 }
@@ -30,6 +31,7 @@ function showThird() {
   document.querySelector("#second-form").classList.add("hidden");
 
   document.querySelector("#third-form").classList.remove("hidden");
+  document.querySelector("#Layer_5").style.fill = "#C6F6BF";
 
   document.querySelector(".done").addEventListener("click", beforePost);
 }
@@ -40,20 +42,7 @@ async function loadSVG() {
   let response = await fetch("processbar.svg");
   let mySvgData = await response.text();
   document.querySelector(".processbar").innerHTML = mySvgData;
-  /* document
-    .querySelector(".firststep")
-    .addEventListener("click", startAnimating); */
 }
-/*
-function startAnimating() {
-  document.querySelector("#Layer_3").style.fill = "#C6F6BF";
-
-  document.querySelector(".secondstep").addEventListener("click", animatingNext);
-}
-
-function animatingNext() {
-  document.querySelector("#Layer_5").style.fill = "#C6F6BF";
-}*/
 
 function beforePost() {
   console.log("Before post");
@@ -70,7 +59,6 @@ function beforePost() {
         email: form.elements.email.value,
         password: form.elements.password.value,
         strengths: form.elements.strengths.value,
-        time: form.elements.hours.value,
         typesofgames: form.elements.types.value,
         games: form.elements.games.value,
         skills: form.elements.improvements.value,
@@ -88,11 +76,22 @@ function post(data) {
     method: "post",
     headers: {
       "Content-Type": "application/json; charset=utf-8",
-      "x-apikey": "7547be8e1ee87ccd914bb4cd9bc9ee420e4e9",
+      "x-apikey": "618bd2f5fc71545b0f5e067a",
       "cache-control": "no-cache",
     },
     body: postData,
   })
     .then((res) => res.json())
     .then((data) => console.log(data));
+
+  formDone();
+}
+
+function formDone() {
+  document.querySelector("#third-form").classList.add("hidden");
+  /* document.querySelector(".done-filling-out").classList.remove("hidden"); */
+  document.querySelector(".header").innerHTML = "Thank you for signing up!";
+  document.querySelector(".headerp").innerHTML =
+    "We will now start personalizing your feed.";
+  document.querySelector(".processbar").classList.add("hidden");
 }

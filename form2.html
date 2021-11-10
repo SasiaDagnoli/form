@@ -9,8 +9,8 @@
   </head>
   <body>
     <div class="txt">
-      <h1>Want to improve your perfomance?</h1>
-      <p>
+      <h1 class="header">Want to improve your perfomance?</h1>
+      <p class="headerp">
         Let us help you get better! <br />
         Create a profile and be the first to know when <br />
         new content is released on our site!
@@ -18,8 +18,8 @@
       <section class="processbar"></section>
     </div>
     <div class="form-container">
-      <section id="first-form" class="form">
-        <form>
+      <form>
+        <div id="first-form" class="form">
           <div class="name">
             <div class="firstname">
               <label for="firstname">Firstname</label>
@@ -42,14 +42,16 @@
               />
             </div>
           </div>
-          <label for="gamertag">Gamertag</label>
-          <input
-            type="text"
-            id="gamertag"
-            name="gamertag"
-            placeholder="Gamertag"
-            required
-          />
+          <div class="gamertag">
+            <label for="gamertag">Gamertag</label>
+            <input
+              type="text"
+              id="gamertag"
+              name="gamertag"
+              placeholder="Gamertag"
+              required
+            />
+          </div>
           <div class="form-group">
             <label for="email">E-mail</label>
             <input
@@ -77,14 +79,13 @@
               >This field requires at least 8 characters</span
             >
           </div>
-        </form>
-        <button class="firststep">Next</button>
-        <br />
-        <br />
-      </section>
 
-      <section id="second-form" class="form hidden">
-        <form>
+          <div class="firststep"><p>Next</p></div>
+          <br />
+          <br />
+        </div>
+
+        <div id="second-form" class="form hidden">
           <div class="form-control">
             <label>What are your strengths in gaming?</label>
 
@@ -238,12 +239,13 @@
             <input type="number" name="hours" id="hours" />
             <label for="hours">Hours</label>
           </div>
-        </form>
-        <button class="secondstep">Next</button>
-      </section>
 
-      <section id="third-form" class="form hidden">
-        <form>
+          <div class="secondstep"><p>Next</p></div>
+        </div>
+
+        <div id="third-form" class="form hidden">
+          <!-- <section id="third-form" class="form hidden"> -->
+          <!-- <form> -->
           <div class="form-control">
             <label>What types of games do you play?</label>
 
@@ -772,8 +774,15 @@
             </details>
           </div>
           <button class="done">Create my profile</button>
-        </form>
-      </section>
+
+          <!--   </section> -->
+        </div>
+      </form>
+
+      <!-- <div class="done-filling-out hidden form">
+        <h1>Thank you for signing up!</h1>
+        <p>We will now start to personalize your feed!</p>
+      </div> -->
     </div>
 
     <script src="script.js"></script>

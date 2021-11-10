@@ -36,11 +36,6 @@ option {
   color: white;
 }
 
-::-webkit-calendar-picker-indicator {
-  filter: invert(1);
-  cursor: pointer;
-}
-
 button {
   font-family: "Shapiro-bold";
   color: #3917cd;
@@ -76,4 +71,10 @@ h2 {
 .error {
   font-family: "Shapiro-regular";
   margin-top: 5px;
+}
+
+.firststep p,
+.secondstep p {
+  font-family: "Shapiro-bold";
+  color: #3917cd;
 }
