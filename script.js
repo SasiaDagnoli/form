@@ -30,17 +30,21 @@ function showThird() {
   document.querySelector("#second-form").classList.add("hidden");
 
   document.querySelector("#third-form").classList.remove("hidden");
+
+  document.querySelector(".done").addEventListener("click", beforePost);
 }
 
-/*loadSVG();
+loadSVG();
 
 async function loadSVG() {
   let response = await fetch("processbar.svg");
   let mySvgData = await response.text();
   document.querySelector(".processbar").innerHTML = mySvgData;
-  document.querySelector(".firststep").addEventListener("click", startAnimating);
+  /* document
+    .querySelector(".firststep")
+    .addEventListener("click", startAnimating); */
 }
-
+/*
 function startAnimating() {
   document.querySelector("#Layer_3").style.fill = "#C6F6BF";
 
@@ -51,7 +55,8 @@ function animatingNext() {
   document.querySelector("#Layer_5").style.fill = "#C6F6BF";
 }*/
 
-/*function beforePost() {
+function beforePost() {
+  console.log("Before post");
   const form = document.querySelector("form");
   form.setAttribute("novalidate", true);
 
@@ -64,7 +69,6 @@ function animatingNext() {
         gamertag: form.elements.gamertag.value,
         email: form.elements.email.value,
         password: form.elements.password.value,
-        whydoyougame: form.elements.reasons.value,
         strengths: form.elements.strengths.value,
         time: form.elements.hours.value,
         typesofgames: form.elements.types.value,
@@ -92,4 +96,3 @@ function post(data) {
     .then((res) => res.json())
     .then((data) => console.log(data));
 }
-*/
