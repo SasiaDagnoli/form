@@ -26,6 +26,55 @@ async function loadSVG() {
 }
 
 function startAnimating() {
-  console.log("start animating");
   document.querySelector("#Layer_3").style.fill = "#C6F6BF";
+
+  document
+    .querySelector(".secondstep")
+    .addEventListener("click", animatingNext);
+}
+
+function animatingNext() {
+  document.querySelector("#Layer_5").style.fill = "#C6F6BF";
+}
+
+function beforePost() {
+  const form = document.querySelector("form");
+  form.setAttribute("novalidate", true);
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if (form.checkValidity()) {
+      const data = {
+        firstname: form.elements.firstname.value,
+        lastname: form.elements.lastname.value,
+        gamertag: form.elements.gamertag.value,
+        email: form.elements.email.value,
+        password: form.elements.password.value,
+        whydoyougame: form.elements.reasons.value,
+        strengths: form.elements.strengths.value,
+        time: form.elements.hours.value,
+        typesofgames: form.elements.types.value,
+        games: form.elements.games.value,
+        skills: form.elements.improvements.value,
+      };
+      post(data);
+    } else {
+      form.reportValidity();
+    }
+  });
+}
+
+function post(data) {
+  const postData = JSON.stringify(data);
+  fetch("https://ezoneform-3ec4.restdb.io/rest/form", {
+    method: "post",
+    headers: {
+      "Content-Type": "application/json; charset=utf-8",
+      "x-apikey": "7547be8e1ee87ccd914bb4cd9bc9ee420e4e9",
+      "cache-control": "no-cache",
+    },
+    body: postData,
+  })
+    .then((res) => res.json())
+    .then((data) => console.log(data));
 }
