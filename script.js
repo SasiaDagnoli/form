@@ -1,3 +1,4 @@
+//open/close checkbox dropdowns
 const details = document.querySelectorAll("details");
 
 function toggleOpen() {
@@ -14,30 +15,43 @@ function toggleOpen() {
 
 details.forEach((detail) => detail.addEventListener("click", toggleOpen));
 
-loadSVG();
+//display next section
+document.querySelector(".firststep").addEventListener("click", showSecond);
+
+function showSecond() {
+  document.querySelector("#first-form").classList.add("hidden");
+
+  document.querySelector("#second-form").classList.remove("hidden");
+
+  document.querySelector(".secondstep").addEventListener("click", showThird);
+}
+
+function showThird() {
+  document.querySelector("#second-form").classList.add("hidden");
+
+  document.querySelector("#third-form").classList.remove("hidden");
+}
+
+/*loadSVG();
 
 async function loadSVG() {
   let response = await fetch("processbar.svg");
   let mySvgData = await response.text();
   document.querySelector(".processbar").innerHTML = mySvgData;
-  document
-    .querySelector(".firststep")
-    .addEventListener("click", startAnimating);
+  document.querySelector(".firststep").addEventListener("click", startAnimating);
 }
 
 function startAnimating() {
   document.querySelector("#Layer_3").style.fill = "#C6F6BF";
 
-  document
-    .querySelector(".secondstep")
-    .addEventListener("click", animatingNext);
+  document.querySelector(".secondstep").addEventListener("click", animatingNext);
 }
 
 function animatingNext() {
   document.querySelector("#Layer_5").style.fill = "#C6F6BF";
-}
+}*/
 
-function beforePost() {
+/*function beforePost() {
   const form = document.querySelector("form");
   form.setAttribute("novalidate", true);
 
@@ -78,3 +92,4 @@ function post(data) {
     .then((res) => res.json())
     .then((data) => console.log(data));
 }
+*/

@@ -5,6 +5,14 @@
 body {
   background-color: #16152b;
 }
+.form-container {
+  display: grid;
+}
+#first-form,
+#second-form,
+#third-form {
+  grid-area: 1/1;
+}
 
 form {
   display: flex;
@@ -81,10 +89,19 @@ button {
   border-radius: 5px;
   margin-top: 30px;
   height: 40px;
+  text-align: center;
+}
+
+.firststep,
+.secondstep {
+  width: 700px;
+  margin-left: 10rem;
+  margin-right: auto;
 }
 
 .hidden {
   visibility: hidden;
+  pointer-events: none;
 }
 
 details[open] {
