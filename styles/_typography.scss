@@ -36,7 +36,14 @@ option {
   color: white;
 }
 
-button {
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+button,
+.firststep p,
+.secondstep p {
   font-family: "Shapiro-bold";
   color: #3917cd;
 }
@@ -45,6 +52,8 @@ h1 {
   font-family: "Uniform-pro-black";
   padding: 50px 50px 0px 50px;
   font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
 }
 
 p {
@@ -56,6 +65,7 @@ h1,
 p {
   color: #f4b996;
   text-align: center;
+  // text-transform: capitalize;
 }
 
 h2 {
@@ -71,10 +81,5 @@ h2 {
 .error {
   font-family: "Shapiro-regular";
   margin-top: 5px;
-}
-
-.firststep p,
-.secondstep p {
-  font-family: "Shapiro-bold";
-  color: #3917cd;
+  font-size: 0.6rem;
 }

@@ -24,6 +24,10 @@ function showSecond() {
   document.querySelector("#second-form").classList.remove("hidden");
   document.querySelector("#Layer_3").style.fill = "#C6F6BF";
 
+  //Change h1 and p
+  document.querySelector("h1").textContent = "Gaming habits";
+  document.querySelector(".txt p").textContent = "Tell us a little about your gaming habits.";
+
   document.querySelector(".secondstep").addEventListener("click", showThird);
 }
 
@@ -33,8 +37,25 @@ function showThird() {
   document.querySelector("#third-form").classList.remove("hidden");
   document.querySelector("#Layer_5").style.fill = "#C6F6BF";
 
+  //Change h1 and p
+  document.querySelector("h1").textContent = "Where would you like to improve your skills?";
+  document.querySelector(".txt p").textContent = `It is important for us to know where your strengths and weaknesses lie,
+  
+  so we can help you optimize your game!`;
+
   document.querySelector(".done").addEventListener("click", beforePost);
 }
+
+//checkboxes DOES NOT WORK
+/*const selectElement = document.querySelectorAll("input[type=checkbox]").forEach((e) => {
+  e.addEventListener("change", (event) => {
+    // let id = e.parentElement.id;
+    var x = e.parentElement.id;
+    console.log(x);
+    const result = document.querySelector(`${x} summary`);
+    result.textContent = `${event.target.value}`;
+  });
+});*/
 
 loadSVG();
 
@@ -91,7 +112,6 @@ function formDone() {
   document.querySelector("#third-form").classList.add("hidden");
   /* document.querySelector(".done-filling-out").classList.remove("hidden"); */
   document.querySelector(".header").innerHTML = "Thank you for signing up!";
-  document.querySelector(".headerp").innerHTML =
-    "We will now start personalizing your feed.";
+  document.querySelector(".headerp").innerHTML = "We will now start personalizing your feed.";
   document.querySelector(".processbar").classList.add("hidden");
 }

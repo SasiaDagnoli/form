@@ -13,6 +13,12 @@ body {
 #third-form {
   grid-area: 1/1;
 }
+.txt {
+  display: grid;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 form {
   display: flex;
@@ -139,6 +145,9 @@ details[open] {
 details[open] label {
   color: #3917cd;
 }
+details[open] input:change {
+  border: 2px solid #3917cd;
+}
 
 .processbar {
   width: 30%;
@@ -165,4 +174,9 @@ details[open] label {
   to {
     transform: translateX(0);
   }
+}
+
+.required:after {
+  content: " *";
+  color: red;
 }
